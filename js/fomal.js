@@ -1336,22 +1336,6 @@ document.addEventListener('visibilitychange', function () {
 
 //----------------------------------------------------------------
 
-/* 搜索框修复 start */
-searchSize();
-window.addEventListener('resize', searchSize)
-// 搜索窗口自适应
-function searchSize() {
-  // 只需要适应手机端
-  if (document.body.clientWidth > 768) return
-  let div = document.querySelector('#algolia-hits')
-  // 监听插入，如果有插入则根据可视高度动态设置最大高度
-  div.addEventListener('DOMNodeInserted', () => {
-    div.children[0].style.maxHeight = (document.documentElement.clientHeight - 210) + 'px'
-  })
-}
-/* 搜索框修复 ennd */
-
-//----------------------------------------------------------------
 
 /* 农历转换 start */
 /**
@@ -2801,11 +2785,11 @@ var now = new Date();
 function createtime() {
   // 当前时间
   now.setTime(now.getTime() + 1000);
-  var start = new Date("08/01/2022 00:00:00"); // 旅行者1号开始计算的时间
+  var start = new Date("01/01/2023 12:00:00"); // 旅行者1号开始计算的时间
   var dis = Math.trunc(23400000000 + ((now - start) / 1000) * 17); // 距离=秒数*速度 记住转换毫秒
   var unit = (dis / 149600000).toFixed(6);  // 天文单位
   // 网站诞生时间
-  var grt = new Date("08/09/2022 00:00:00");
+  var grt = new Date("01/01/2023 12:00:00");
   var days = (now - grt) / 1e3 / 60 / 60 / 24,
     dnum = Math.floor(days),
     hours = (now - grt) / 1e3 / 60 / 60 - 24 * dnum,
