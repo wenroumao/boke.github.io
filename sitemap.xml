@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wenroumao.com/categories/index.html</loc>
+    <loc>https://wenroumao.com/manifest.json</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/manifest.json</loc>
+    <loc>https://wenroumao.com/categories/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/gallery/index.html</loc>
+    <loc>https://wenroumao.com/box/animation/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/animation/index.html</loc>
+    <loc>https://wenroumao.com/box/gallery/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -56,24 +56,6 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/personal/about/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenroumao.com/personal/bb/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wenroumao.com/life/games/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
@@ -83,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/personal/love/index.html</loc>
+    <loc>https://wenroumao.com/life/movies/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -101,7 +83,16 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/site/time/index.html</loc>
+    <loc>https://wenroumao.com/personal/about/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/personal/love/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -111,6 +102,24 @@
   
   <url>
     <loc>https://wenroumao.com/site/census/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/personal/bb/index.html</loc>
+    
+    <lastmod>2023-03-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/site/time/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
@@ -129,15 +138,6 @@
   
   <url>
     <loc>https://wenroumao.com/social/link/index.html</loc>
-    
-    <lastmod>2023-03-01</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenroumao.com/life/movies/index.html</loc>
     
     <lastmod>2023-03-01</lastmod>
     
