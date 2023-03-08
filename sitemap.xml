@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wenroumao.com/life/games/index.html</loc>
+    
+    <lastmod>2023-03-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/life/games/ikun/index.html</loc>
+    
+    <lastmod>2023-03-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://wenroumao.com/categories/index.html</loc>
     
     <lastmod>2023-03-08</lastmod>
@@ -74,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/tags/index.html</loc>
+    <loc>https://wenroumao.com/box/animation/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -83,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/animation/index.html</loc>
+    <loc>https://wenroumao.com/tags/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -101,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/life/games/index.html</loc>
+    <loc>https://wenroumao.com/personal/bb/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -119,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/personal/bb/index.html</loc>
+    <loc>https://wenroumao.com/site/census/index.html</loc>
     
     <lastmod>2023-03-05</lastmod>
     
@@ -146,15 +164,6 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/site/census/index.html</loc>
-    
-    <lastmod>2023-03-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://wenroumao.com/manifest.json</loc>
     
     <lastmod>2023-03-01</lastmod>
@@ -173,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/gallery/%E5%8E%9F%E7%A5%9E/index.html</loc>
+    <loc>https://wenroumao.com/box/gallery/%E5%8A%A8%E6%BC%AB/index.html</loc>
     
     <lastmod>2023-01-21</lastmod>
     
@@ -182,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/gallery/%E5%8A%A8%E6%BC%AB/index.html</loc>
+    <loc>https://wenroumao.com/box/gallery/%E5%8E%9F%E7%A5%9E/index.html</loc>
     
     <lastmod>2023-01-21</lastmod>
     
@@ -209,7 +218,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/2023/01/20/2023-01-20%E7%AC%AC%E4%BA%8C%E7%AF%87%E6%96%87%E7%AB%A0/</loc>
+    <loc>https://wenroumao.com/2023/01/20/2023-01-20%E6%96%87%E6%A1%88/</loc>
     
     <lastmod>2023-01-20</lastmod>
     
