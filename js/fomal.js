@@ -3106,6 +3106,6 @@ function setBlur() {
 
 
 // source/scripts/announcement.js
-document.addEventListener("DOMContentLoaded", function () {
-  alert("有些文档上锁了，密码可以私信微信:baby-pzw  |  QQ：2964421512，发送好友时就问，不要问在吗之类的");
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   alert("有些文档上锁了，密码可以私信微信:baby-pzw  |  QQ：2964421512，发送好友时就问，不要问在吗之类的");
+// });
