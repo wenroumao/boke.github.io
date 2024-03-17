@@ -272,7 +272,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/gallery/%E5%8A%A8%E6%BC%AB/index.html</loc>
+    <loc>https://wenroumao.com/box/gallery/%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A2/index.html</loc>
     
     <lastmod>2023-01-21</lastmod>
     
@@ -290,7 +290,7 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/box/gallery/%E8%8D%92%E9%87%8E%E5%A4%A7%E9%95%96%E5%AE%A2/index.html</loc>
+    <loc>https://wenroumao.com/box/gallery/%E5%8A%A8%E6%BC%AB/index.html</loc>
     
     <lastmod>2023-01-21</lastmod>
     
@@ -372,20 +372,6 @@
   </url>
   
   <url>
-    <loc>https://wenroumao.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://wenroumao.com/tags/Typora/</loc>
-    <lastmod>2024-03-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://wenroumao.com/tags/DW/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -394,6 +380,20 @@
   
   <url>
     <loc>https://wenroumao.com/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/tags/%E8%BD%AF%E4%BB%B6/</loc>
+    <lastmod>2024-03-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://wenroumao.com/tags/Typora/</loc>
     <lastmod>2024-03-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
