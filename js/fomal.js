@@ -671,97 +671,97 @@ if (document.body.clientWidth > 992) {
       $(".neko").css('display', 'none');
     }
   }
-  (function ($) {
-    $.fn.nekoScroll = function (option) {
-      var defaultSetting = {
-        top: '0',
-        scroWidth: 6 + 'px',
-        z_index: 9999,
-        zoom: 0.9,
-        borderRadius: 5 + 'px',
-        right: 55.6 + 'px',
-        nekoImg: "https://wenroumao.oss-cn-beijing.aliyuncs.com/img/u=3016912806,894673657&fm=253&fmt=auto&app=138&f=JPEG.png",
-        hoverMsg: "冬天啦~",
-        color: "var(--theme-color)",
-        during: 500,
-        blog_body: "body",
-      };
-      var setting = $.extend(defaultSetting, option);
-      var getThis = this.prop("className") !== "" ? "." + this.prop("className") : this.prop("id") !== "" ? "#" +
-        this.prop("id") : this.prop("nodeName");
-      if ($(".neko").length == 0) {
-        this.after("<div class=\"neko\" id=" + setting.nekoname + " data-msg=\"" + setting.hoverMsg + "\"></div>");
-      }
-      let basicInfo = getBasicInfo();
-      $(getThis)
-        .css({
-          'position': 'fixed',
-          'width': setting.scroWidth,
-          'top': setting.top,
-          'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
-          'z-index': setting.z_index,
-          'background-color': setting.bgcolor,
-          "border-radius": setting.borderRadius,
-          'right': setting.right,
-          'background-image': 'url(' + setting.scImg + ')',
-          'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
-          'background-size': 'contain'
-        });
-      $("#" + setting.nekoname)
-        .css({
-          'position': 'fixed',
-          'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
-          'z-index': setting.z_index * 10,
-          'right': setting.right,
-          'background-image': 'url(' + setting.nekoImg + ')',
-        });
-      show(getBasicInfo());
-      $(window)
-        .scroll(function () {
-          let basicInfo = getBasicInfo();
-          show(basicInfo);
-          $(getThis)
-            .css({
-              'position': 'fixed',
-              'width': setting.scroWidth,
-              'top': setting.top,
-              'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
-              'z-index': setting.z_index,
-              'background-color': setting.bgcolor,
-              "border-radius": setting.borderRadius,
-              'right': setting.right,
-              'background-image': 'url(' + setting.scImg + ')',
-              'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
-              'background-size': 'contain'
-            });
-          $("#" + setting.nekoname)
-            .css({
-              'position': 'fixed',
-              'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
-              'z-index': setting.z_index * 10,
-              'right': setting.right,
-              'background-image': 'url(' + setting.nekoImg + ')',
-            });
-          if (basicInfo.ScrollTop == basicInfo.S_V) {
-            $("#" + setting.nekoname)
-              .addClass("showMsg")
-          } else {
-            $("#" + setting.nekoname)
-              .removeClass("showMsg");
-            $("#" + setting.nekoname)
-              .attr("data-msg", setting.hoverMsg);
-          }
-        });
-      this.click(function (e) {
-        btf.scrollToDest(0, 500)
-      });
-      $("#" + setting.nekoname)
-        .click(function () {
-          btf.scrollToDest(0, 500)
-        });
-      return this;
-    }
-  })(jQuery);
+  // (function ($) {
+  //   $.fn.nekoScroll = function (option) {
+  //     var defaultSetting = {
+  //       top: '0',
+  //       scroWidth: 6 + 'px',
+  //       z_index: 9999,
+  //       zoom: 0.9,
+  //       borderRadius: 5 + 'px',
+  //       right: 55.6 + 'px',
+  //       nekoImg: "https://wenroumao.oss-cn-beijing.aliyuncs.com/img/u=3016912806,894673657&fm=253&fmt=auto&app=138&f=JPEG.png",
+  //       hoverMsg: "冬天啦~",
+  //       color: "var(--theme-color)",
+  //       during: 500,
+  //       blog_body: "body",
+  //     };
+  //     var setting = $.extend(defaultSetting, option);
+  //     var getThis = this.prop("className") !== "" ? "." + this.prop("className") : this.prop("id") !== "" ? "#" +
+  //       this.prop("id") : this.prop("nodeName");
+  //     if ($(".neko").length == 0) {
+  //       this.after("<div class=\"neko\" id=" + setting.nekoname + " data-msg=\"" + setting.hoverMsg + "\"></div>");
+  //     }
+  //     let basicInfo = getBasicInfo();
+  //     $(getThis)
+  //       .css({
+  //         'position': 'fixed',
+  //         'width': setting.scroWidth,
+  //         'top': setting.top,
+  //         'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
+  //         'z-index': setting.z_index,
+  //         'background-color': setting.bgcolor,
+  //         "border-radius": setting.borderRadius,
+  //         'right': setting.right,
+  //         'background-image': 'url(' + setting.scImg + ')',
+  //         'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+  //         'background-size': 'contain'
+  //       });
+  //     $("#" + setting.nekoname)
+  //       .css({
+  //         'position': 'fixed',
+  //         'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
+  //         'z-index': setting.z_index * 10,
+  //         'right': setting.right,
+  //         'background-image': 'url(' + setting.nekoImg + ')',
+  //       });
+  //     show(getBasicInfo());
+  //     $(window)
+  //       .scroll(function () {
+  //         let basicInfo = getBasicInfo();
+  //         show(basicInfo);
+  //         $(getThis)
+  //           .css({
+  //             'position': 'fixed',
+  //             'width': setting.scroWidth,
+  //             'top': setting.top,
+  //             'height': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 + 'px',
+  //             'z-index': setting.z_index,
+  //             'background-color': setting.bgcolor,
+  //             "border-radius": setting.borderRadius,
+  //             'right': setting.right,
+  //             'background-image': 'url(' + setting.scImg + ')',
+  //             'background-image': '-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.1) 75%, transparent 75%, transparent)', 'border-radius': '2em',
+  //             'background-size': 'contain'
+  //           });
+  //         $("#" + setting.nekoname)
+  //           .css({
+  //             'position': 'fixed',
+  //             'top': basicInfo.Band_H * setting.zoom * basicInfo.ViewH * 0.01 - 50 + 'px',
+  //             'z-index': setting.z_index * 10,
+  //             'right': setting.right,
+  //             'background-image': 'url(' + setting.nekoImg + ')',
+  //           });
+  //         if (basicInfo.ScrollTop == basicInfo.S_V) {
+  //           $("#" + setting.nekoname)
+  //             .addClass("showMsg")
+  //         } else {
+  //           $("#" + setting.nekoname)
+  //             .removeClass("showMsg");
+  //           $("#" + setting.nekoname)
+  //             .attr("data-msg", setting.hoverMsg);
+  //         }
+  //       });
+  //     this.click(function (e) {
+  //       btf.scrollToDest(0, 500)
+  //     });
+  //     $("#" + setting.nekoname)
+  //       .click(function () {
+  //         btf.scrollToDest(0, 500)
+  //       });
+  //     return this;
+  //   }
+  // })(jQuery);
 
   $(document).ready(function () {
     //部分自定义
@@ -2765,16 +2765,16 @@ var newYear = () => {
   }
 
   // 元宝飘落
-  jQuery(document).ready(function ($) {
-    $('#fomal').wpSuperSnow({
-      flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
-      totalFlakes: '100',
-      zIndex: '999999',
-      maxSize: '30',
-      maxDuration: '20',
-      useFlakeTrans: false
-    });
-  });
+  // jQuery(document).ready(function ($) {
+  //   $('#fomal').wpSuperSnow({
+  //     flakes: ['https://tuchuang.voooe.cn/images/2023/01/02/yb1.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb2.webp', 'https://tuchuang.voooe.cn/images/2023/01/02/yb3.webp'],
+  //     totalFlakes: '100',
+  //     zIndex: '999999',
+  //     maxSize: '30',
+  //     maxDuration: '20',
+  //     useFlakeTrans: false
+  //   });
+  // });
 }
 // Pjax适配：若没有开启Pjax这里直接是newYear()即可
 // 开了Pjax的用以下两句
