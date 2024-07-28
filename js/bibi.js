@@ -11,60 +11,88 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // 获取数据
-function getNew() {
-    let bibi = document.getElementById('bibi');
+async function getNew() {
+    const bibi = document.getElementById('bibi');
+    removeElementById('more');
+
+    showLoading(bibi);
+
     try {
-        bibi.removeChild(document.getElementById('more'))
-    } catch (error) { }
+        const res = await fetch(Url + page);
+        const data = await res.json();
+        total = data.data.total;
+        items = data.data.items;
+        nowNum += items.length;
 
-    bibi.innerHTML += '<div id="bb_loading"><img src="/assets/loading3.gif" alt="bb_loading"></div>' // bb_loading图片可以f12在我网站源码下载，也可以使用其他图片。
-
-    fetch(Url + page).then(res => res.json()).then((res) => {
-        total = res.data.total
-        items = res.data.items
-        nowNum += items.length
-        if (page == 1) {
-            document.querySelector('.bb-info').innerHTML = '<svg style="width:1.20em;height:1.20em;top:5px;fill:currentColor;overflow:hidden;position:relative"><use xlink:href="#icon-chat"></svg> 站长的唠叨(' + total + ')'
+        if (page === 1) {
+            document.querySelector('.bb-info').innerHTML = '<svg style="width:1.20em;height:1.20em;top:5px;fill:currentColor;overflow:hidden;position:relative"><use xlink:href="#icon-chat"></svg> 站长的唠叨(' + total + ')';
         }
-        page += 1
-    }).then(() => {
-        bb();
+
+        page++;
+        renderItems();
+
         if (nowNum < total) {
-            document.getElementById('bibi').innerHTML += '<button id="more" onclick="getNew()">再翻翻</button>'
+            bibi.innerHTML += '<button id="more" onclick="getNew()">再翻翻</button>';
         }
-        document.getElementById('bibi').removeChild(document.getElementById('bb_loading'))
-    })
+    } catch (error) {
+        console.error("Error fetching data: ", error);
+    } finally {
+        removeElementById('bb_loading');
+    }
 }
 
 // 渲染数据
-function bb() {
-    let bb = document.getElementById('bb-main')
-    items.forEach((item) => {
-        let time = item.createdAt.substring(0, 10);
-        let div = document.createElement('div')
-        item.content = contentFormat(item.content)
+function renderItems() {
+    const bb = document.getElementById('bb-main');
+    items.forEach(item => {
+        const time = item.createdAt.substring(0, 10);
+        const div = document.createElement('div');
+        item.content = formatContent(item.content);
 
-        div.className = 'bb-card'
-        div.innerHTML = '<div class="card-header"><div class="avatar"><img class="nofancybox"src="' + item.author.avatar + '"></div><div class="name">' + item.author.nickName + '</div>' + svg + '<div class="card-time">' + time + '</div></div><div class="card-content">' + item.content + '</div><div class="card-footer"><div data-v-185689ea=""class="card-label"style="background: ' + item.tag.bgColor + '; color: white;">' + item.tag.name + '</div></div>'
-        bb.appendChild(div)
-    })
+        div.className = 'bb-card';
+        div.innerHTML = `
+            <div class="card-header">
+                <div class="avatar"><img class="nofancybox" src="${item.author.avatar}"></div>
+                <div class="name">${item.author.nickName}</div>
+                ${svg}
+                <div class="card-time">${time}</div>
+            </div>
+            <div class="card-content">${item.content}</div>
+            <div class="card-footer">
+                <div class="card-label" style="background: ${item.tag.bgColor}; color: white;">${item.tag.name}</div>
+            </div>`;
+        bb.appendChild(div);
+    });
 }
 
 // content格式化
-function contentFormat(s) {
-    let br = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-    let re_forimg = /<img(.*?)src=[\"|\']?(.*?)[\"|\']?(.*?)>|!\[(.*?)\]\((.*?)\)/g;
-    let getImgUrl = /(http(.*).[jpg|png|gif])/g;
-    let ls = s.match(getImgUrl)
-    s = s.replace(re_forimg, '')
-    s = s.replace(br, '')
+function formatContent(content) {
+    const br = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+    const re_forimg = /<img(.*?)src=["']?(.*?)["']?(.*?)>|!\[(.*?)\]\((.*?)\)/g;
+    const getImgUrl = /(http.*\.(jpg|png|gif))/g;
+    let imgUrls = content.match(getImgUrl);
 
-    let html = '<br>'
-    if (ls) {
-        ls.forEach((e) => {
-            html += '<a href="' + e + '" target="_blank" data-fancybox="group" class="fancybox"><img src="' + e + '"></a>'
-        })
+    content = content.replace(re_forimg, '').replace(br, '');
+
+    let html = '<br>';
+    if (imgUrls) {
+        imgUrls.forEach(url => {
+            html += `<a href="${url}" target="_blank" data-fancybox="group" class="fancybox"><img src="${url}"></a>`;
+        });
     }
-    s += html
-    return s
+    content += html;
+    return content;
+}
+
+// 工具函数：移除元素
+function removeElementById(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.parentNode.removeChild(element);
+    }
+}
+
+// 工具函数：显示加载动画
+function showLoading(parent) {
+    parent.innerHTML += '<div id="bb_loading"><img src="/assets/loading3.gif" alt="bb_loading"></div>';
 }
